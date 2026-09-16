@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "xyz.long4543.unfuckzzui"
+    namespace = "xyz.long4543.unfuckzui"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "xyz.long4543.unfuckzzui"
+        applicationId = "xyz.long4543.unfuckzui"
         minSdk = 33
         targetSdk = 35
         versionCode = 10000

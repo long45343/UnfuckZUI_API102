@@ -4,7 +4,7 @@
     public <init>();
 }
 
--keep public class * implements xyz.long4543.unfuckzzui.core.FeatureHandler {
+-keep public class * implements xyz.long4543.unfuckzui.core.FeatureHandler {
     public <init>();
 }
 
