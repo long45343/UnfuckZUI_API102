@@ -38,7 +38,7 @@ android {
             if (keystoreFile.exists()) {
                 storeFile = keystoreFile
                 storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "android"
-                keyAlias = System.getenv("KEY_ALIAS") ?: "textcascade"
+                keyAlias = System.getenv("KEY_ALIAS") ?: "unfuckzui"
                 keyPassword = System.getenv("KEY_PASSWORD") ?: "android"
             }
         }
