@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unfuck ZUI Tablet</string>
+    <string name="xposed_description">修复联想 ZUI 系统中的异常设计与反人类限制 (libxposed API 102)</string>
+
+    <string name="category_appearance">外观</string>
+    <string name="honor_notification_smallicon_title">原生通知图标</string>
+    <string name="honor_notification_smallicon_summary">还原原生白底单色通知图标，避免被联想强制替换为彩色大图标</string>
+
+    <string name="category_behavior">行为</string>
+    <string name="allow_disable_dax_title">允许禁用内置扬声器的杜比全景声</string>
+    <string name="disable_force_stop_title">禁用划卡杀后台</string>
+    <string name="disable_force_stop_summary">多任务界面划卡时仅移除卡片，不强制停止应用进程</string>
+    <string name="fix_guest_user_title">阻止自动创建访客用户</string>
+    <string name="fix_guest_user_summary">仅在多用户开关启用时允许创建访客用户</string>
+    <string name="default_portrait_title">默认屏幕方向改为竖屏</string>
+    <string name="disable_game_helper_popup_title">禁用游戏助手激活弹窗</string>
+    <string name="change_task_timeout_title">后台任务超时改为 7 天</string>
+    <string name="change_task_timeout_summary">后台任务超时后将从最近任务中移除（AOSP 默认 6 小时）</string>
+
+    <string name="category_cn">仅适用于中国版 ROM</string>
+    <string name="package_installer_style_title">原生应用安装器</string>
+    <string name="permission_controller_style_title">原生权限管理器</string>
+    <string name="disable_virus_scan_title">禁用安全中心病毒扫描</string>
+    <string name="allow_get_packages_title">总是允许获取应用列表</string>
+    <string name="allow_get_packages_summary">拦截系统权限检查，解除读取已安装应用列表限制</string>
+    <string name="default_enable_autorun_title">默认允许应用自启</string>
+    <string name="default_enable_autorun_summary">总是允许后台自启与关联启动白名单</string>
+    <string name="unlock_cn_gms_title">移除中国版 Google Play 服务限制</string>
+    <string name="unlock_cn_gms_summary">启用跨设备服务、快速分享、Play 商店自主更新等功能</string>
+
+    <string name="category_about">关于</string>
+    <string name="version_title">模块版本</string>
+    <string name="show_launcher_icon">显示启动器图标</string>
+    <string name="rom_region">ROM 区域</string>
+    <string name="action_reload_settings">立即重载配置</string>
+    <string name="message_module_not_enabled">LSPosed 模块未激活或服务未连接</string>
+    <string name="status_active">已激活 (API 102)</string>
+    <string name="status_inactive">未激活</string>
+</resources>

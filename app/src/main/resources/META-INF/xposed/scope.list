@@ -1,0 +1,8 @@
+system
+com.android.systemui
+com.android.settings
+com.zui.launcher
+com.zui.safecenter
+com.android.packageinstaller
+com.android.permissioncontroller
+com.zui.game.service
