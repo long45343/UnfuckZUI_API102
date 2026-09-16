@@ -1,0 +1,70 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag name to release (e.g. v1.0.0)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build & Publish Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease --stacktrace
+
+      - name: Prepare Release Artifacts
+        id: prepare_artifacts
+        run: |
+          TAG_NAME="${{ github.ref_name }}"
+          if [ -n "${{ github.event.inputs.tag_name }}" ]; then
+            TAG_NAME="${{ github.event.inputs.tag_name }}"
+          fi
+          
+          OUTPUT_DIR="app/build/outputs/apk/release"
+          TARGET_APK="${OUTPUT_DIR}/UnfuckZUI-${TAG_NAME}.apk"
+          
+          cp "${OUTPUT_DIR}/app-release.apk" "${TARGET_APK}"
+          cd "${OUTPUT_DIR}"
+          sha256sum "UnfuckZUI-${TAG_NAME}.apk" > "UnfuckZUI-${TAG_NAME}.apk.sha256"
+          echo "target_apk=${TARGET_APK}" >> $GITHUB_OUTPUT
+          echo "tag_name=${TAG_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.prepare_artifacts.outputs.tag_name }}
+          name: UnfuckZUI ${{ steps.prepare_artifacts.outputs.tag_name }}
+          files: |
+            app/build/outputs/apk/release/UnfuckZUI-*.apk
+            app/build/outputs/apk/release/UnfuckZUI-*.apk.sha256
+          draft: false
+          prerelease: false
+          generate_release_notes: true
