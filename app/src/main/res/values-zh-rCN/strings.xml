@@ -17,6 +17,8 @@
     <string name="disable_game_helper_popup_title">禁用游戏助手激活弹窗</string>
     <string name="change_task_timeout_title">后台任务超时改为 7 天</string>
     <string name="change_task_timeout_summary">后台任务超时后将从最近任务中移除（AOSP 默认 6 小时）</string>
+    <string name="disable_face_unlock_timeout_title">解除人脸解锁超时限制</string>
+    <string name="disable_face_unlock_timeout_summary">解除闲置 4 小时及 24 小时必须输入密码/图案的限制</string>
 
     <string name="category_cn">仅适用于中国版 ROM</string>
     <string name="package_installer_style_title">原生应用安装器</string>

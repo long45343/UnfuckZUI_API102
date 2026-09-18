@@ -72,6 +72,7 @@ fun SettingsScreen() {
                 "default_portrait",
                 "disable_game_helper_popup",
                 "change_task_timeout",
+                "disable_face_unlock_timeout",
                 "package_installer_style",
                 "permission_controller_style",
                 "disable_virus_scan",
@@ -145,7 +146,8 @@ fun SettingsScreen() {
                 SettingItem("fix_auto_guest", R.string.fix_guest_user_title, R.string.fix_guest_user_summary),
                 SettingItem("default_portrait", R.string.default_portrait_title, isDynamic = false),
                 SettingItem("disable_game_helper_popup", R.string.disable_game_helper_popup_title),
-                SettingItem("change_task_timeout", R.string.change_task_timeout_title, R.string.change_task_timeout_summary, isDynamic = false)
+                SettingItem("change_task_timeout", R.string.change_task_timeout_title, R.string.change_task_timeout_summary, isDynamic = false),
+                SettingItem("disable_face_unlock_timeout", R.string.disable_face_unlock_timeout_title, R.string.disable_face_unlock_timeout_summary, isDynamic = true)
             )
             items(behaviorItems.size) { idx ->
                 val item = behaviorItems[idx]

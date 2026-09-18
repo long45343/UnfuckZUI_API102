@@ -16,6 +16,8 @@
     <string name="disable_game_helper_popup_title">Disable game helper activation popup</string>
     <string name="change_task_timeout_title">Change inactive task timeout to 7 days</string>
     <string name="change_task_timeout_summary">Inactive tasks will be removed from task switcher after timeout (AOSP defaults to 6 hours)</string>
+    <string name="disable_face_unlock_timeout_title">Disable face unlock timeout</string>
+    <string name="disable_face_unlock_timeout_summary">Remove the restriction requiring PIN/password after 4 or 24 hours of non-use</string>
 
     <string name="category_cn">PRC ROM specific</string>
     <string name="package_installer_style_title">AOSP-style package installer</string>

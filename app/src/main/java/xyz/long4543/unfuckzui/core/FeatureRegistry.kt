@@ -3,6 +3,7 @@ package xyz.long4543.unfuckzui.core
 import xyz.long4543.unfuckzui.feature.AllowDisableDolbyAtmos
 import xyz.long4543.unfuckzui.feature.AllowGetPackages
 import xyz.long4543.unfuckzui.feature.ChangeTaskTimeout
+import xyz.long4543.unfuckzui.feature.DisableFaceUnlockTimeout
 import xyz.long4543.unfuckzui.feature.DefaultPortrait
 import xyz.long4543.unfuckzui.feature.DisableForceStop
 import xyz.long4543.unfuckzui.feature.DisableGameHelperPopup
@@ -30,6 +31,7 @@ object FeatureRegistry {
         EnableAutorunByDefault,
         UnlockCnGms,
         DisableGameHelperPopup,
-        ChangeTaskTimeout
+        ChangeTaskTimeout,
+        DisableFaceUnlockTimeout
     )
 }
